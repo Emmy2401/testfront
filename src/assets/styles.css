@@ -1,0 +1,240 @@
+/* styles.css */
+
+/* Global styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #e9f5f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+  }
+  
+  .container {
+    background-color: #ffffff;
+    padding: 20px 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    margin-top: 50px;
+  }
+  
+  h2, h3 {
+    color: #003366;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  form {
+    margin-top: 10px;
+  }
+  
+  form div {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    transition: border 0.3s ease;
+  }
+  
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="number"]:focus,
+  input[type="password"]:focus {
+    border: 1px solid #007bff;
+    outline: none;
+    background-color: #fff;
+  }
+  
+  input[type="checkbox"] {
+    transform: scale(1.2);
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+  
+  button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+  }
+  
+  button:active {
+    transform: translateY(0);
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .product-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+  }
+  
+  .product-item strong {
+    flex: 1;
+  }
+  
+  .product-item button {
+    flex: 0 0 auto;
+    width: auto;
+    padding: 5px 10px;
+    border-radius: 8px;
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .product-item button:hover {
+    background-color: #218838;
+  }
+  
+  .search-section {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .search-section input {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  .search-section button {
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #17a2b8;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .search-section button:hover {
+    background-color: #138496;
+  }
+  
+  .router-link {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .router-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Login/Register Specific */
+  .login-container,
+  .register-container {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    background-color: #fff;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .login-container form,
+  .register-container form {
+    text-align: left;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .login-container button,
+  .register-container button {
+    margin-top: 15px;
+  }
+  
+  p {
+    font-size: 14px;
+    margin-top: 20px;
+    color: #555;
+  }
+  
+  a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Hospital table specific */
+  .results-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .results-section table th, .results-section table td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+    font-size: 14px;
+  }
+  
+  .results-section table th {
+    background-color: #007bff;
+    color: #007bff;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+  
+  .results-section table td {
+    background-color: #f9f9f9;
+  }
+  
+  .results-section table tr:hover td {
+    background-color: #eef4fb;
+  }
+  

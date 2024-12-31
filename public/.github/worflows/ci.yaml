@@ -1,0 +1,46 @@
+name: CI pour le Frontend (Vue.js)
+
+on:
+  push:
+    branches:
+      - 'main'
+  pull_request:
+    branches:
+      - 'main'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Récupère le code du dépôt
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Installer Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.17.1' # Choisis la version que tu utilises
+
+      # Installer les dépendances
+      - name: Install dependencies
+        run: npm install
+        working-directory: ./frontend
+
+      # Lancer les tests (si tu en as)
+      - name: Run tests
+        run: npm run test:unit
+        working-directory: ./frontend
+
+      # Build du frontend pour production
+      - name: Build frontend
+        run: npm run build
+        working-directory: ./frontend
+
+      # Optionnel : publier les résultats de build comme artefact
+      - name: Upload frontend artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: frontend-build
+          path: ./frontend/dist/
